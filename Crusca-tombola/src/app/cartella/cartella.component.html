@@ -8,20 +8,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
   </head>
   <body>
-    <h1 align="center">Tombola Crusca Bresso</h1>
-    <div align = "center">
-        <h2><font color="yellow"><strong>Sono AppComponent</strong></font></h2>
-            <form>
-                <div class="form-group">
-                    <label><h2>Scegli un numero</h2></label><br>
-                    <label id="shownumber"><h2>Numero casuale</h2></label>
-                </div>
-                <button id="button" type="submit" class="btn btn-warning" (click)="estrazioneNumero()">Estrai</button>
-            </form>
-            <app-cartella [numeriEstratti]="numeriEstratti" [ultimoNumero]="ultimoNumero"></app-cartella>
+    <div align="center">
+      <p><font color="yellow">Sono il componente cartella</font></p>
+      <form>
+					<div class="form-group">
+            <p>Ultimo numero estratto</p>
+						<label><h3>{{ultimoNumero}}</h3></label>
+            <p>Lista numeri estratti</p>
+            <label *ngFor="let numero of numeriEstratti"><h3>{{numero}}---</h3></label>
     </div>
+  </form>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
